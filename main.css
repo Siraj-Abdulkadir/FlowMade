@@ -10,3 +10,38 @@
     background-image: url(./Resourses/background3.jpg);
     background-size: 25%;
 }
+
+.menu{
+    width: 20%;
+    height: 100vh;
+    background-color: #ff8390;
+    position: absolute;
+    z-index: 1;
+}
+
+.square{
+    width: 15rem;
+    height: 10rem;
+    background-color: gray;
+    margin: 5% 0 0 5%;
+    font-size: 2rem;
+    align-items: center;
+    text-align:center ;
+}
+.ellipse{
+    width: 15rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #0c388b;
+    margin: 5% 0 0 5%;
+    font-size: 2rem;
+    align-items: center;
+    text-align:center ;
+    cursor: move;
+}
+.dragging{
+    opacity: 100%;
+}
+.square:hover{
+    cursor: move;
+}
