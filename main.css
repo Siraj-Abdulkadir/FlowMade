@@ -45,3 +45,7 @@
 .square:hover{
     cursor: move;
 }
+
+.draggable{
+    position: fixed;
+}

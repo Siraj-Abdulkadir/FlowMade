@@ -1,18 +1,39 @@
-let draggables = document.querySelectorAll('.draggable')
-let containers = document.querySelector('background')
+let newX = 0,newY=0 ,startX=0 ,startY=0
 
-draggables.forEach(draggable => {
-    draggable.addEventListener('dragstart', ()=>{
-     draggable.classList.add('dragging')
-    })
-})
+const draggables = document.getElementById('.draggable')
+
+// let containers = document.querySelector('background')
 
 
-containers.forEach(container => {
-container.addEventListener('dragover', e => {
-    e.preventDefault()
-    let draggable = document.querySelector('.dragging');
-    containers.appendChild(draggable)
+draggables.addEventListener('mousedown', mouseDown)
 
-})
-})
+function mouseDown(e){
+   startX=e.clientX
+   startY=e.clientY
+
+
+   document.addEventListener('mousemove', mouseMove)
+   document.addEventListener('mouseup', mouseUp)
+}
+
+function mouseMove(e){
+    newX = startX - e.clientX
+    newY = startY - e.clientY
+
+
+    startX = e.clientX
+    startY = e.clientY
+
+
+    draggables.style.top = (draggables.style.top - newY) + 'px'
+    draggables.style.left =(draggables.style.left - newX) + 'px'
+
+
+    console.log(newY)
+}
+
+
+function mouseUp (e){
+    document.removeEventListener('mousemove', mouseMove)
+}
+
