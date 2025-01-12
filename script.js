@@ -1,12 +1,27 @@
 let startX= 0, startY=0, newX=0, newY=0;
-
-let draggableElement = document.getElementById('draggable')
-
-// let containers = document.querySelector('background')
-
-draggableElement.addEventListener('mousedown', mouseDown)
+let closeIcon = document.getElementById('close-icon')
+let expandIcon = document.getElementById('expand-icon')
+let draggableElement = document.querySelectorAll('.draggable')
+let menuBar = document.querySelector('.menu')
 
 
+draggableElement.forEach(draggable => {
+
+    draggable.addEventListener('mousedown', mouseDown)
+    draggable.addEventListener('dblclick', TextChanger)
+})
+
+
+closeIcon.addEventListener('click', menuRemover)
+expandIcon.addEventListener('click', expandFunc)
+
+function menuRemover(e){
+   menuBar.classList.add('menuremover')
+}
+
+function expandFunc(e){
+    menuBar.classList.remove('menuremover')
+}
 
 
 function mouseDown(e){
@@ -27,10 +42,19 @@ function mouseMove(e){
    startX = e.clientX
    startY = e.clientY
 
-   draggableElement.style.top = startY + 'px'
-   draggableElement.style.left = startX + 'px'
+   draggable.style.top = (draggable.offsetTop - newY) + 'px'
+   draggable.style.left = (draggable.offsetLeft - newX) + 'px'
+
 }
+
 
 function mouseUp(e){
     document.removeEventListener('mousemove', mouseMove)
+}
+
+function TextChanger(e){
+    let theText = prompt("Enter Your Text")
+
+    console.log(theText)
+    draggable.textContent = theText
 }

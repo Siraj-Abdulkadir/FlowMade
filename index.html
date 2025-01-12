@@ -5,10 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlowMade</title>
     <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
 </head>
 <body>
-        <div id="draggable" class="draggable ellipse" draggable="true">ellipse</div>
-    <div class="background">
+
+    <div class="menu">
+        <img id="add-circle" src="./Resourses/add-circle.svg" alt="add-circle">
+        <img id="info-icon" src="./Resourses/info.png" alt="info">
+        <img id="close-icon" src="./Resourses/close.png" alt="close">
+        <h1>Menu</h1>
+        <div draggable="true"  class="draggable Round">Round</div>
+        <div draggable="true"  class="draggable Parallelogram">ParalleloGram</div>
+        <div draggable="true"  class="draggable Rectangle">Rectangle</div>
+        <div draggable="true"  class="draggable Diamond">Diamond</div>
+        <div draggable="true"  class="draggable Circle">Circle</div>
+    </div>
+    <div class="expand-menu">
+        <img id="expand-icon" src="./Resourses/expand.svg" alt="expand">
+    </div>
+    <div id="background">
     </div>
 </body>
 <script src="./script.js"></script>

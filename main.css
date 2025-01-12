@@ -3,8 +3,11 @@
     box-sizing: border-box;
     padding: 0;
 }
-
-.background{
+body{
+    font-family: Tahoma, sans-serif;
+    color: #fff;
+}
+#background{
     width: 100vw;
     height: 100vh;
     background-image: url(./Resourses/background3.jpg);
@@ -12,39 +15,88 @@
 }
 
 .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     width: 20%;
     height: 100vh;
-    background-color: #ff8390;
+    background-color:#ab8875;
     position: absolute;
     z-index: 1;
+    color:#fff;
 }
 
-.square{
-    width: 15rem;
-    height: 10rem;
-    background-color: gray;
-    margin: 5% 0 0 5%;
-    font-size: 2rem;
-    align-items: center;
-    text-align:center ;
+.menuremover{
+    display: none;
+
 }
-.ellipse{
-    width:240px;
-    height:80px;
+.expand-menu{
+    padding: 2rem 2rem;
     background-color: #0c388b;
-  
-    font-size: 2rem;
-    align-items: center;
-    text-align:center ;
-    cursor: move;
+    width: 1%;
+    position: fixed;
+    border-radius: 0 15px 15px 0;
+    margin: 20% 0 0 0;
 }
-.dragging{
-    opacity: 100%;
+.expand-menu img{
+    width: 30px;
 }
-.square:hover{
-    cursor: move;
+#close-icon{
+    width: 15%;
+    position:absolute;
+    right: 1%;
+    top: 1%;
+}
+#info-icon{
+    width: 13%;
+    position:absolute;
+    right: 20%;
+    top: 1.5%;
+    color: #606060;
 }
 
+#add-circle{
+    display: none;
+}
 .draggable{
-    position: fixed;
+    cursor: move;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.Round{
+    background-color: #0c388b;
+    width: 15rem;
+    height: 5rem;
+    border-radius: 40px;
+    font-size: 2rem;
+}
+.Parallelogram{
+    background-color: #128b0c;
+    width: 15rem;
+    height: 5rem;
+    font-size: 2rem;
+    transform: skewX(-25deg);
+}
+.Rectangle{
+    background-color: #8b3b0c;
+    width: 15rem;
+    height: 5rem;
+    font-size: 2rem;
+}
+.Diamond{
+    transform: rotate(45deg);
+    background-color: #8b0c7c;
+    width: 7rem;
+    height: 7rem;
+    font-size: 1.5rem;
+}
+.Circle{
+    background-color: #8b830c;
+    width: 7rem;
+    height: 7rem;
+    font-size: 2rem;
+    border-radius: 50%;
 }
