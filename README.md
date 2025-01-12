@@ -1,2 +1,2 @@
 # FlowMade
-Allows users to design stunning flowcharts
+Allows users to design and create stunning flowcharts
