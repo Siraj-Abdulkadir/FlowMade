@@ -29,11 +29,10 @@
     text-align:center ;
 }
 .ellipse{
-    width: 15rem;
-    height: 5rem;
-    border-radius: 50%;
+    width:240px;
+    height:80px;
     background-color: #0c388b;
-    margin: 5% 0 0 5%;
+  
     font-size: 2rem;
     align-items: center;
     text-align:center ;
